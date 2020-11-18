@@ -17,11 +17,11 @@ destroyBtnRef.addEventListener("click", hendlerDestroy);
 
 function createBoxes() {
   console.time("Time to fill");
-  for (let i = 0; i <= inputRef.value; i += 1) {
+  for (let i = 0; i < inputRef.value; i += 1) {
     const span = document.createElement("span");
     span.style.display = "block";
-    span.style.width = `${sizeBox}px`;
-    span.style.height = `${sizeBox}px`;
+    span.style.width = `${sizeBox + 10 * i}px`;
+    span.style.height = `${sizeBox + 10 * i}px`;
     span.style.fontSize = 0;
     span.style.backgroundColor = `rgb(${random(256)},${random(256)},${random(
       256
@@ -34,6 +34,7 @@ function createBoxes() {
 }
 
 function hendlerDestroy() {
-  boxes.splice(0, boxes.length);
+  // boxes.splice(0, boxes.length);
+  boxes = [];
   boxesDivRef.innerHTML = `<h1>Очищено</h1>`;
 }

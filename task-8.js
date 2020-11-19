@@ -8,7 +8,7 @@ boxesDivRef.style.display = "flex";
 boxesDivRef.style.flexWrap = "wrap";
 //style for main container
 
-const boxes = [];
+let boxes = [];
 let sizeBox = 30;
 const random = (num) => Math.floor(Math.random() * num + 1);
 
